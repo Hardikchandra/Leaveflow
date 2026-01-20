@@ -1,6 +1,6 @@
 // Simple auth service - stores user in localStorage
 export async function login(email, password) {
-  const res = await fetch("http://localhost:5001/api/auth/login", {
+  const res = await fetch("http://154.201.127.68:5001/api/auth/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email, password })
