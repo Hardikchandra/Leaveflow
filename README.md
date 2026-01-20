@@ -1,17 +1,32 @@
-# LeaveFlow — Simple, Practical Leave Management
+# LeaveFlow — Leave Management System
 
-LeaveFlow is a minimal, interview-ready leave management system. It helps teams apply for leave, track balances, and approve requests quickly with a clean, role-based workflow.
+LeaveFlow is a simple and lightweight leave management system built to make requesting and approving leave easy—without unnecessary complexity.
 
-## Why this exists
-- Problem: Teams need a lightweight way to request and approve leave without complexity.
-- Solution: LeaveFlow lets Employees apply, HR review, and Managers finalize approvals — with sensible defaults like auto-approving valid paid leave.
+It’s designed for small to mid-sized teams that want a clean, role-based workflow instead of bulky HR software.
 
-## How it works (quick overview)
-- Employees submit leave requests (Paid, Medical, Emergency, Unpaid) with dates and a reason.
-- System calculates days automatically (inclusive of start/end).
-- If it’s Paid leave and applied at least 1 day before 5 PM, it’s auto-approved (balance deducted immediately).
-- Otherwise, HR reviews first. Approved requests go to Manager for final approval.
-- Leave balances update on approval. Calendar and logs show status and who’s on leave today.
+## Why LeaveFlow?
+
+Most teams don’t need a complicated HR tool just to manage leave.
+
+The problem:
+Leave requests are often handled over WhatsApp, email, or spreadsheets, which leads to confusion, missed approvals, and unclear leave balances.
+
+The solution:
+LeaveFlow provides a clear and structured flow where:
+- Employees apply for leave in a few clicks
+- HR reviews when needed
+- Managers give final approval
+- Everyone can see leave status clearly
+
+## How It Works
+
+- Employees apply for leave by selecting the type (Paid, Medical, Emergency, or Unpaid), dates, and a short reason.
+- The system automatically calculates the number of leave days.
+- If a Paid Leave is applied at least 1 day before 5 PM, it gets auto-approved and the leave balance is updated instantly.
+- All other leave requests are first reviewed by HR.
+- Once HR approves, the request goes to the Manager for final approval.
+- After approval, leave balances are updated and reflected in the system.
+- A calendar and activity logs show who is on leave and the current status of each request.
 
 ## Live roles and demo accounts
 Use these to explore the app end-to-end:
@@ -80,25 +95,21 @@ Ports used:
     - `frontend/src/components/*`: Leave form, calendar, history, approval lists.
     - `frontend/src/services/*`: API clients for auth, users, leaves.
 
-## Troubleshooting
-- “Port in use” on backend: Run `pkill -f "node.*server"` then `npm start` in `backend`.
-- Frontend fails “missing index.html”: Ensure `frontend/public/index.html` exists (this repo includes it).
-- Seed not visible: Re-run `npm run seed` in `backend` and restart the server.
 
 ## Project Structure
 ```
 backend/
-├── controllers/    # API logic
-├── db/             # SQLite and seed scripts
-├── routes/         # Express routes
-└── server.js       # Express bootstrap
+├── controllers/    # API
+├── db/             # SQLite
+├── routes/         #  routes
+└── server.js       # serve
 
 frontend/
 ├── public/         # index.html
 └── src/
-        ├── components/ # Reusable UI pieces
+        ├── components/ # Reusable UI
         ├── pages/      # Role dashboards and login
-        ├── services/   # API calls
+        ├── services/   # API 
         └── assets/     # Styles, icons
 ```
 
