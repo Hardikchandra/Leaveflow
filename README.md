@@ -2,7 +2,7 @@
 
 LeaveFlow is a simple and lightweight leave management system built to make requesting and approving leave easy — without unnecessary complexity.
 
-It’s designed for small to mid-sized teams that want a clean, role-based workflow instead of bulky HR software.
+It’s designed for small to mid-sized teams that want a clean, role-based workflow  software.
 
 ---
 
@@ -33,10 +33,13 @@ LeaveFlow provides a clear and structured workflow where:
 
 ---
 
-##  Screenshots
+##  Screenshots/Demo video
+
+
+![Flowleave](screenshots/1.png)
 
 ###  Login
-![Login](screenshots/1.png)
+![Login](screenshots/5.png)
 
 ### Dashboard
 ![Dashboard](screenshots/2.png)
