@@ -51,11 +51,10 @@ LeaveFlow provides a clear and structured workflow where:
 
 ## 🎥 Demo Video
 
-Watch a quick walkthrough of LeaveFlow here:
-
-🔗 **[Watch Demo Video](./Demo_leaveflow.mp4)**
-
-> _If GitHub doesn’t play the video inline, it will download automatically._
+<video width="800" controls>
+  <source src="./Demo_leaveflow.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ---
 
