@@ -49,12 +49,12 @@ LeaveFlow provides a clear and structured workflow where:
 
 ---
 
-## 🎥 Demo Video
+##  Work Flow Video
 
-<video width="800" controls>
-  <source src="./Demo_leaveflow.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+▶️ **[Watch Demo Video](./Demo_leaveflow.mp4)**
+
+> Click to download and play the full walkthrough of LeaveFlow.
+
 
 ---
 
