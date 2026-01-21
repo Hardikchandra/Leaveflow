@@ -2,13 +2,7 @@
 
 LeaveFlow is a simple and lightweight leave management system built to make requesting and approving leave easy — without unnecessary complexity.
 
-It’s designed for small to mid-sized teams that want a clean, role-based workflow  software.
-
 ---
-
-## Why LeaveFlow?
-
-Most teams don’t need a complicated HR tool just to manage leave.
 
 ### The problem  
 Leave requests are often handled over WhatsApp, email, or spreadsheets, which leads to confusion, missed approvals, unclear leave balances, and lack of visibility.
@@ -19,7 +13,7 @@ LeaveFlow provides a clear and structured workflow where:
 - Employees apply for leave in just a few clicks  
 - HR reviews requests when required  
 - Managers give final approval  
-- Everyone can clearly track leave status and history  
+- Everyone can clearly track leave status 
 
 ---
 
@@ -119,13 +113,54 @@ Use these to explore the app end-to-end:
 - Database (SQLite): Simple tables for `users`, `leave_balances`, and `leaves`.
 
 Data flow:
-1. Frontend submits via `fetch/axios` to Express routes.
 2. Controllers validate input, enforce rules (auto-approval, balance checks).
 3. SQLite stores everything; queries keep dashboards updated.
 
 ## Setup & Run Locally
 
-Backend (API):
+Changing API URLs for Local Development
+
+If you want to run the frontend locally or point it to a different backend (such as your local machine or a different server), you need to update the API URLs in the following files:
+
+**1. Authentication Service**
+
+File: `frontend/src/services/authService.js`
+
+Find:
+```js
+const res = await fetch("https://hardik.gigawiz.dev/api/auth/login", { ... });
+```
+Change to (for local backend):
+```js
+const res = await fetch("http://localhost:5001/api/auth/login", { ... });
+```
+
+**2. Leave Service**
+
+File: `frontend/src/services/leaveService.js`
+
+Find:
+```js
+const API_BASE_URL = "https://hardik.gigawiz.dev/api/leaves";
+```
+Change to:
+```js
+const API_BASE_URL = "http://localhost:5001/api/leaves";
+```
+
+**3. User Service**
+
+File: `frontend/src/services/userService.js`
+
+Find:
+```js
+const API_URL = 'https://hardik.gigawiz.dev/api/users';
+```
+Change to:
+```js
+const API_URL = 'http://localhost:5001/api/users';
+```
+Backend :
 ```bash
 cd backend
 npm install
@@ -141,7 +176,7 @@ npm start      # runs on http://localhost:3000
 ```
 
 Ports used:
-- Backend: 5001 (auto-fallback to 5002 if busy)
+- Backend: 5001
 - Frontend: 3000
 
 ## Core business logic (key rules)
@@ -181,11 +216,3 @@ frontend/
         ├── services/   # API 
         └── assets/     # Styles, icons
 ```
-
-## Coding conventions (quick)
-- Components: PascalCase (`LeaveForm.js`)
-- Functions/vars: camelCase (`handleSubmit`)
-- Keep comments practical and close to logic.
-
-## License
-MIT
