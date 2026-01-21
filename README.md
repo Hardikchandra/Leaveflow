@@ -1,22 +1,89 @@
 # LeaveFlow — Leave Management System
 
-LeaveFlow is a simple and lightweight leave management system built to make requesting and approving leave easy—without unnecessary complexity.
+LeaveFlow is a simple and lightweight leave management system built to make requesting and approving leave easy — without unnecessary complexity.
 
 It’s designed for small to mid-sized teams that want a clean, role-based workflow instead of bulky HR software.
+
+---
 
 ## Why LeaveFlow?
 
 Most teams don’t need a complicated HR tool just to manage leave.
 
-The problem:
-Leave requests are often handled over WhatsApp, email, or spreadsheets, which leads to confusion, missed approvals, and unclear leave balances.
+### The problem  
+Leave requests are often handled over WhatsApp, email, or spreadsheets, which leads to confusion, missed approvals, unclear leave balances, and lack of visibility.
 
-The solution:
-LeaveFlow provides a clear and structured flow where:
-- Employees apply for leave in a few clicks
-- HR reviews when needed
-- Managers give final approval
-- Everyone can see leave status clearly
+### The solution  
+LeaveFlow provides a clear and structured workflow where:
+
+- Employees apply for leave in just a few clicks  
+- HR reviews requests when required  
+- Managers give final approval  
+- Everyone can clearly track leave status and history  
+
+---
+
+## How LeaveFlow Works
+
+1. Employees submit leave requests (Paid, Medical, Emergency, or Unpaid)
+2. Leave duration is calculated automatically
+3. Valid paid leaves can be auto-approved based on rules
+4. Other requests move through HR → Manager approval
+5. Leave balances update instantly after approval
+
+---
+
+##  Screenshots
+
+###  Login
+![Login](screenshots/1.png)
+
+### Dashboard
+![Dashboard](screenshots/2.png)
+
+###  Apply Leave
+![Apply Leave](screenshots/3.png)
+
+###  Leave History
+![Leave History](screenshots/4.png)
+
+---
+
+## 🎥 Demo Video
+
+Watch a quick walkthrough of LeaveFlow here:
+
+🔗 **[Watch Demo Video](./demo.mp4)**
+
+> _If GitHub doesn’t play the video inline, it will download automatically._
+
+---
+
+## 🚀 Deployment Overview
+
+- **Frontend**: React (Vercel)
+- **Backend**: Node.js + Express (PM2)
+- **Reverse Proxy**: Nginx (FastPanel)
+- **Domain**: `https://hardik.gigawiz.dev`
+- **SSL**: Let’s Encrypt (HTTPS enforced)
+
+---
+
+## 🧠 Key Highlights
+
+- Clean role-based access (Employee, HR, Manager)
+- Simple UI focused on usability
+- Secure API with HTTPS
+- Lightweight and easy to extend
+- Built with real-world team workflows in mind
+
+---
+
+## 📌 Notes
+
+- Screenshots are stored inside the `screenshots/` folder
+- Demo video (`demo.mp4`) is kept in the repository root
+- Backend APIs are served securely over HTTPS
 
 ## How It Works
 
