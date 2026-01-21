@@ -1,5 +1,5 @@
 // API calls for leave management
-const API_BASE_URL = "http://154.201.127.68:5001/api/leaves";
+const API_BASE_URL = "https://hardik.gigawiz.dev/api/leaves";
 
 export async function applyLeave(data) {
   const res = await fetch(`${API_BASE_URL}/apply`, {
