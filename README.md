@@ -53,7 +53,7 @@ LeaveFlow provides a clear and structured workflow where:
 
 Watch a quick walkthrough of LeaveFlow here:
 
-🔗 **[Watch Demo Video](./demo.mp4)**
+🔗 **[Watch Demo Video](./Demo_leaveflow.mp4)**
 
 > _If GitHub doesn’t play the video inline, it will download automatically._
 
